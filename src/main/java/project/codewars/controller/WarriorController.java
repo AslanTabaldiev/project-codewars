@@ -1,7 +1,13 @@
 package project.codewars.controller;
 
-import org.springframework.stereotype.Controller;
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.RestController;
+import project.codewars.Repositories.WarriorRepository;
 
-@Controller
+@RestController
+@AllArgsConstructor
 public class WarriorController {
+
+    private final WarriorRepository warriorRepository;
+
 }

@@ -16,6 +16,7 @@ public class Warrior {
     private String registration_date;
     private String last_seen_date;
     private Integer warrior_points;
+    private Integer completed_kata;
 
     @OneToOne(mappedBy = "warrior")
     private User user;

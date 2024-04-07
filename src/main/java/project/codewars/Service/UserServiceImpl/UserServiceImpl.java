@@ -46,10 +46,10 @@ public class UserServiceImpl implements UserService {
         user.setEmail(userRequest.getEmail());
         user.setPassword(passwordEncoder.encode(userRequest.getPassword()));
 
-//        Warrior warrior = new Warrior();
-//        warrior.setUsername(warriorRequest.getUsername());
-//        warrior.setWarrior_rank(8);
-//        warrior.setRegistration_date(LocalDate.now().toString());
+        Warrior warrior = new Warrior();
+        warrior.setUsername(userRequest.getUsername());
+        warrior.setWarrior_rank(8);
+        warrior.setRegistration_date(LocalDate.now().toString());
 
         userRepository.save(user);
     }

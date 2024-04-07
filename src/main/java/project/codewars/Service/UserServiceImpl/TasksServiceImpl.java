@@ -33,6 +33,7 @@ public class TasksServiceImpl implements TasksService {
         task.setCompletion_times(0);
         task.setBookmark(0);
 
+
         tasksRepository.save(task);
 
         Stats stats = new Stats();
