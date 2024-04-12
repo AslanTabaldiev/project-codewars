@@ -3,6 +3,11 @@ package project.codewars.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 @Entity
 @Data
 public class Warrior {
@@ -20,4 +25,7 @@ public class Warrior {
 
     @OneToOne(mappedBy = "warrior")
     private User user;
+
+    @OneToMany(mappedBy = "warrior", cascade = CascadeType.ALL)
+    private List<Solution> solutions;
 }
